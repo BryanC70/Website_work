@@ -28,7 +28,7 @@ def home():
 def second_page():
   return render_template('second_page.html', subtitle='Second page', text= 'This is the second page')
 
-@app.route("/register")
+@app.route("/register", methods=['GET', 'POST'])
 def register():
     form = RegistrationForm()
     if form.validate_on_submit():
